@@ -12,7 +12,7 @@ function App() {
     
 
 <Switch>
- <Route path="/" exact component={Home} />
+ <Route path="/client" exact component={Home} />
  <Route path="/Student" exact component={Student} />
  <Route path="/faculty" exact component={Faculty} />
  <Route path="/branch" exact component={Final} />

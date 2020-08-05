@@ -97,7 +97,7 @@ else{
               />
            
               <MDBBtn color="primary" type="submit">SUBMIT</MDBBtn> &nbsp;
-              <Link to="/"><strong>BACK TO HOME</strong> </Link>
+              <Link to="/client"><strong>BACK TO HOME</strong> </Link>
       </MDBCardBody>
           </MDBCard>
         </MDBCol>

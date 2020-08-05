@@ -56,13 +56,13 @@ k++;
   return (
     <div className="all" > <br/>
     <h1 className="header"> STUDENT ROOM ALLOCATION ROOM WISE</h1>
-   <br/>   &nbsp; <MDBBtn color="dark" ><h5><Link to="/" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
+   <br/>   &nbsp; <MDBBtn color="dark" ><h5><Link to="/client" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
    &nbsp; &nbsp; &nbsp;
    <MDBBtn color="dark" ><h5><Link to="/faculty" style={{ color: '#FFF' }}><strong>PREVIOUS PAGE</strong> </Link></h5> </MDBBtn>
             {
     pack.map((numList,i) =>(
            <div>
-            <MDBContainer  className="rooms" >
+            <MDBContainer   class="container-fluid" >
       <MDBRow>
         <MDBCol md="10">
           <MDBCard>

@@ -121,12 +121,12 @@ cstrs.push(cstr[z]);
     <div className="final"  > <br/>
     <h1 className="header"> STUDENT ROOM ALLOCATION BRANCH WISE</h1>
    <br/>
-    <MDBBtn color="dark" ><h5><Link to="/" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
+    <MDBBtn color="dark" ><h5><Link to="/client" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
     &nbsp; &nbsp; &nbsp;
    <MDBBtn color="dark" ><h5><Link to="/faculty" style={{ color: '#FFF' }}><strong>PREVIOUS PAGE</strong> </Link></h5> </MDBBtn>
    <br/><br/>
     <h1>CSE</h1>
-<Table striped bordered hover variant="dark">
+<Table striped bordered hover variant="dark"  class="container-fluid">
 <thead>
     <tr>
       <th><h3>FROM</h3></th>

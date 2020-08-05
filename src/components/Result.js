@@ -29,7 +29,7 @@ function Result(props) {
   </tbody>
 </table>
 <MDBBtn color="primary" onClick={props.prevStep} >BACK TO PREVIOUS PAGE</MDBBtn>
-<div className="back">&nbsp;&nbsp;<Link to="/" ><strong>BACK TO HOME</strong> </Link></div>
+<div className="back">&nbsp;&nbsp;<Link to="/client" ><strong>BACK TO HOME</strong> </Link></div>
 </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -45,7 +45,7 @@ function Result(props) {
             <MDBCardBody className="mx-4">
    <h3>YOUR NUMBER IS INVALID PLEASE CHECK AGAIN  </h3>
    <MDBBtn color="dark" onClick={props.prevStep}>BACK TO PREVIOUS PAGE</MDBBtn></MDBCardBody>
-   <MDBBtn color="dark" ><h5><Link to="/" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
+   <MDBBtn color="dark" ><h5><Link to="/client" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
           </MDBCard>
         </MDBCol>
       </MDBRow>
