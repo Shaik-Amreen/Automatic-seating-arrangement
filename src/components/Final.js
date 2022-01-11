@@ -119,11 +119,13 @@ cstrs.push(cstr[z]);
    z=z+11; }
   return (
     <div className="final"  > <br/>
-    <h1 className="header"> STUDENT ROOM ALLOCATION BRANCH WISE</h1>
-   <br/>
-    <MDBBtn color="dark" ><h5><Link to="/client" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
-    &nbsp; &nbsp; &nbsp;
-   <MDBBtn color="dark" ><h5><Link to="/faculty" style={{ color: '#FFF' }}><strong>PREVIOUS PAGE</strong> </Link></h5> </MDBBtn>
+    
+   <span style={{textAlign:"center",color:"#000249"}}>
+     <h1>MADANAPALLE INSITITUE OF SCIENCE AND TECHNOLOGY</h1>
+       <h2>UGC AUTONOMOUS</h2></span><br/>
+       <h3 className="header"> STUDENT ROOM ALLOCATION BRANCH WISE</h3>
+    <MDBBtn color="dark" style={{borderRadius:"0px",float:"left"}}><h5><Link to="/client" style={{ color: '#FFF' }}><strong>BACK TO HOME</strong> </Link></h5> </MDBBtn>
+   <MDBBtn color="dark" style={{borderRadius:"0px",float:"left"}}><h5><Link to="/faculty" style={{ color: '#FFF' }}><strong>PREVIOUS PAGE</strong> </Link></h5> </MDBBtn>
    <br/><br/>
     <h1>CSE</h1>
 <Table striped bordered hover variant="dark"  class="container-fluid">

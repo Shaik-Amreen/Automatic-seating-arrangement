@@ -1,27 +1,26 @@
 import React from 'react';
-import image from "../main.jpg";
+import image from "./background.jpg";
 import { Link } from 'react-router-dom';
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody} from 'mdbreact';
-import './form.css'
+
+
 const Home = () =>{
-
+// style={{backgroundImage: `url(${image}`,height:"100vh"}}
  return(
-  <div className="nav"  style={{backgroundImage: `url(${image}` }}>
+   <div class="border border-primary" style={{backgroundImage:`url(${image}`,height:"100vh",
+  }}><br/>
+   <span style={{textAlign:"center",color:"white"}}><h1>MADANAPALLE INSITITUE OF  TECHNOLOGY AND SCIENCE</h1>
+   <h2>UGC AUTONOMOUS</h2></span>
+<br/><br/>
+<span class="form-inline justify-content-center">
+ <span class="card" style={{padding:"3%",width:"30%",background:"#e1f5fe",borderRadius:"0px"}}>
 
-  <MDBContainer className="am" >
-        <MDBRow>
-        <MDBCol md="6">
-          <MDBCard >
-            <MDBCardBody className="mx-4">&nbsp;&nbsp;
-        <Link to="/client"> <strong> HOME</strong></Link> &nbsp; &nbsp; &nbsp;
-        <Link to="/Student"><strong>STUDENT</strong> </Link> &nbsp; &nbsp;
-       <Link to="/faculty"> <strong>FACULTY</strong>  </Link> 
-       </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        </MDBRow>
-    </MDBContainer>
- 
+<div class="form-inline justify-content-center" >
+   
+      <Link to="/Student"><strong style={{color:"#00006f"}} >STUDENT</strong> </Link> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+       <Link to="/login"> <strong style={{color:"#00006f"}}>ADMIN</strong>  </Link> 
+  </div>
+</span>
+</span>
   </div>
  )
 

@@ -4,24 +4,25 @@ const merge=require('deepmerge')
 var { Student} = require('../models/student');
 var {room} = require('../models/arooms')
 var {unavailableroom} = require('../models/rooms')
+var {admin} = require('../models/admin');
 let data=[];
 let arr=[];
 let result=[];
-let rooms=[];
+let rooms=[];adm=[];
 let k=0, m=0 ,i=0,j=0;
-router.get('/', (req, res) => {
+router.get('/student', (req, res) => {
   room.find((err,docs)=>{
     if(!err){
-     arr.push(...docs);
-  
+     arr.push(...docs);arr.sort();
 unavailableroom.find((err, docs) => {
-    if (!err) {rooms.push(...docs)
+    if (!err) {rooms.push(...docs);
+      admin.find((err, docs) => {
+        if (!err) {adm.push(...docs);
       Student.find((err, docs) => {
         if (!err) {
-          var datetime = new Date();
-    console.log(datetime);
           if(data.length===0){
-          data.push(...docs)
+          data.push(...docs);data.sort();
+          console.log(data)
           var same =  data.filter(function(hero) {
             return hero.branch == "CSE" || hero.branch == "CST"; });
           var diff =  data.filter(function(hero) {
@@ -29,20 +30,20 @@ unavailableroom.find((err, docs) => {
             for( i=0;i<arr.length;i++){
             m=m+12;
               for( j=k;j<m;j++){
-              let a=same[j];
+              let c=same[j];
               k++;
-              let b=arr[i];
-              const mer=merge(a._doc,b._doc)
+              let d=arr[i];
+              const mer=merge(c._doc,d._doc)
              
               result.push(mer); }}
          m=0;k=0;
          for(i=0;i<arr.length;i++){
             m=m+12;
               for( j=k;j<m;j++){
-              let a=diff[j];
+              let e=diff[j];
               k=k+1;
-              let b=arr[i];
-              const mer=merge(a._doc,b._doc);
+              let f=arr[i];
+              const mer=merge(e._doc,f._doc);
               result.push(mer);
             ;
             
@@ -51,6 +52,8 @@ unavailableroom.find((err, docs) => {
       })}
       else console.log('Error while retrieving all records : ' + JSON.stringify(err, undefined, 2))
     })}
+    else console.log('Error while retrieving all records : ' + JSON.stringify(err, undefined, 2))
+  })}
     else console.log('Error while retrieving all records : ' + JSON.stringify(err, undefined, 2))})
   });
 

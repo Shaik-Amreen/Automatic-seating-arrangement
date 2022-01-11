@@ -9,13 +9,9 @@ function Result(props) {
     return (
         <div>
         {(props.result!=='')?
-      <div className="class"  style={{backgroundImage: `url(${am}` }} >
-            
-        <MDBContainer  className="start">
-      <MDBRow>
-        <MDBCol md="8">
-          <MDBCard border="primary">
-            <MDBCardBody className="mx-4">
+      <div className="class form-inline justify-content-center"  style={{backgroundImage: `url(${am}`,paddingLeft:"20%"}} >
+            <div class="card" style={{padding:"2%"}}>
+       
         <table className="table">
   <tbody>  
     <tr>
@@ -30,11 +26,7 @@ function Result(props) {
 </table>
 <MDBBtn color="primary" onClick={props.prevStep} >BACK TO PREVIOUS PAGE</MDBBtn>
 <div className="back">&nbsp;&nbsp;<Link to="/client" ><strong>BACK TO HOME</strong> </Link></div>
-</MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
+</div>
    </div>
 :
 <div className="danger"  style={{backgroundImage: `url(${image}` }}>

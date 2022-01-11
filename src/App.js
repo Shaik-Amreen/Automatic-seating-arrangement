@@ -4,22 +4,27 @@ import Faculty from './components/Faculty';
 import Final from './components/Final';
 import Home from './components/Home'
 import Rooms from './components/Rooms'
+import Admin from './components/Admin'
+import Userlogin from './components/Userlogin'
+import Branch from './components/Branch'
 import { BrowserRouter, Route,Switch } from 'react-router-dom';
-function App() {
-  return (
-   
+function App() {//`url(${image}`
+  return (<>
+ 
 <BrowserRouter>
-    
 
 <Switch>
- <Route path="/client" exact component={Home} />
- <Route path="/Student" exact component={Student} />
- <Route path="/faculty" exact component={Faculty} />
- <Route path="/branch" exact component={Final} />
- <Route path="/rooms" exact component={Rooms} />
+ <Route exact path="/client" exact component={Home} />
+ <Route exact path="/Student" exact component={Student} />
+ <Route exact path="/faculty" exact component={Faculty} />
+ <Route exact path="/branch" exact component={Branch} />
+ <Route exact path="/rooms" exact component={Rooms} />
+ <Route exact path="/login" exact component={Userlogin}/>
+ <Route exact path="/admin" exact component={Admin}/>
  </Switch>
 
 </BrowserRouter>
+</>
   );
 }
 
